@@ -36,6 +36,7 @@
 * Organisation: Basics, Components, Templates, Pages
 
 **Pseudo BEM**
+
 Classes should be lowercase and follow pseudo BEM practices
 
 **Selectors**
