@@ -31,19 +31,27 @@
 ### HTML
 
 ### CSS
+**Selectors**
+**Breakpoints & Media Queries**
+**Mobile First**
 
 ### Javascript
-
+**ES6**
+**DEGJS**
 
 ## Design Patterns
 
 ### Atomic Design
 
 ### Browser Support
+** Defining Browser Support**
+** Progressive Enhancement**
 
 ### Accessibility
 
 ### Performance
+**Performance Considerations**
+**Performance Budgets
 
 ### Detailed Design Patterns & Anti-Patterns
 
@@ -58,13 +66,31 @@
 ## Tooling
 
 ### IDEs
+**Sublime Text**
+**PHPStorm**
 
 ### CSS
+**PostCSS**
+**Legacy**
+* Sass
+* Compass
 
 ### Javascript
+**General**
+* JSPM - Package Management
+* SystemJS - Module Bundling
+* DEGJS
+
+**Magento**
+* jQuery
 
 ### ALM
+* JIRA
+* Assembla
 
 ### Version Control
+**Git**
+**Git Workflows**
 
 ### Testing
+**BrowserStack**
