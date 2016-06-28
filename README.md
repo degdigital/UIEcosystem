@@ -31,11 +31,17 @@
 ### HTML
 
 ### CSS
+**Pseudo BEM**
+
 **Selectors**
+* ID selectors
+* Javascript hooks
+* Nested Selectors
+
+**Variables**
 
 **Breakpoints & Media Queries**
-
-**Mobile First**
+* Mobile First
 
 ### Javascript
 **ES6**
