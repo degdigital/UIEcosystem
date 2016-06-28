@@ -1,6 +1,6 @@
 # UI Ecosystem
 
-*DEG UI Code Standards, Design Patterns, Frameworks & Tooling
+*DEG UI Code Standards, Design Patterns, Frameworks & Tooling*
 
 ## Table of Contents
 
