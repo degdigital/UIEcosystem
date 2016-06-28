@@ -31,7 +31,12 @@
 ### HTML
 
 ### CSS
+**Atomic CSS**
+* Modular
+* Organisation: Basics, Components, Templates, Pages
+
 **Pseudo BEM**
+Classes should be lowercase and follow pseudo BEM practices
 
 **Selectors**
 * ID selectors
