@@ -17,6 +17,7 @@
     - [Pattern Lab](#pattern-lab)
   4. [Libraries](#libraries)
     - [DEGJS](#degjs)
+    - [jQuery](#jQuery)
   5. [Tooling](#tooling)
     - [IDEs](#ides)
     - [CSS](#css-1)
