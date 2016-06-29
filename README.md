@@ -53,6 +53,14 @@ Classes should be lowercase and follow pseudo BEM practices
 
 **DEGJS**
 
+## Frameworks
+
+### Skeletor
+
+Skeletor is a [Grunt](http://gruntjs.com)-powered, [Pattern Lab](http://patternlab.io)-centric, highly-customizable web project boilerplate and build tool created by the [DEG](http://www.degdigital.com) UI team. Skeletor uses [PostCSS](http://postcss.org) for CSS processing and [JSPM](http://jspm.io)/[SystemJS](https://github.com/systemjs/systemjs) for Javascript package management, module bundling/loading, and transpilation. Full Skeletor documentation is available [here](https://github.com/degdigital/skeletor).
+
+### Pattern Lab
+
 ## Design Patterns
 
 ### Atomic Design
@@ -92,15 +100,6 @@ Although projects do often present unique challenges, there are certain challeng
 - [Mega Menus](https://docs.google.com/document/d/1l7t2MpYf1Ux-RtRyzD2NKWinuLwmD4IYFX8emtpJFcc/edit)
 - [The Fold](https://docs.google.com/presentation/d/1baCcqMkYE0h3S7oP637ZMjK106bUpyHNRMw2NW7a4BE/edit?usp=drive_web)
 - [Web Fonts](https://docs.google.com/document/d/16_8FOMAAdCp2FL-vtSkj72uUVYpiBaYRUw0JrlAdpQE/edit)
-
-## Frameworks
-
-### Skeletor
-
-Skeletor is a [Grunt](http://gruntjs.com)-powered, [Pattern Lab](http://patternlab.io)-centric, highly-customizable web project boilerplate and build tool created by the [DEG](http://www.degdigital.com) UI team. Skeletor uses [PostCSS](http://postcss.org) for CSS processing and [JSPM](http://jspm.io)/[SystemJS](https://github.com/systemjs/systemjs) for Javascript package management, module bundling/loading, and transpilation. Full Skeletor documentation is available [here](https://github.com/degdigital/skeletor).
-
-### Pattern Lab
-
 
 ## Tooling
 
