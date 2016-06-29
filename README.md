@@ -86,17 +86,48 @@ Good Formatting
 
 **Pseudo BEM**
 
-Classes should be lowercase and follow pseudo BEM practices
-
-**Selectors**
-* ID selectors
-* Javascript hooks
-* Nested Selectors
+*[Pseudo BEM Description]
 
 **Variables**
 
+*[variable naming structure/syntax]
+
+**Nested Selectors**
+* Following BEM or pseudo BEM should allow you to avoid nesting in most cases. When nesting does become needed, it should be kept as shallow as possible. A good code smell is to refactor and break out CSS that requires nesting beyond three levels deep.
+
 **Breakpoints & Media Queries**
-* Mobile First
+* __Write Mobile First CSS.__ Authoring mobile-first styles results in smaller, simpler, more maintainable code and is in line with DEG's stance on progressive enhancement.
+
+    __Bad__
+
+    ```css
+    .column {
+        float: left;
+        width: 50%;
+    }
+    @media all and (max-width: 50em) {
+        .column {
+            float: none;
+            width: auto;
+        }
+    }
+    ```
+    __Good__
+
+    ```css
+    @media all and (min-width: 50em) {
+        .column {
+            float: left;
+            width: 50%;
+        }
+    }
+    ```
+* __Don’t use device dimensions to determine breakpoints.__ The device landscape is always changing, so today’s values might be moot even just a year down the road. The Web is inherently fluid, so it’s our job to create interfaces that look and function beautifully on any screen instead of in just a few arbitrary buckets.
+
+**Javascript Hooks**
+* js-
+* is-
+* --is-
 
 ### Javascript
 **ES6**
