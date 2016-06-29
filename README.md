@@ -86,9 +86,9 @@ css
 
 **Pseudo BEM**
 * [BEM](http://getbem.com/) is a CSS methodology and syntax, that helps achieve reusable components. BEM stands for Block Element Modifier and consists of:
-    * Block: Standalone entity that is meaningful on its own.
-    * Element: Parts of a block and have no standalone meaning. They are semantically tied to its block.
-    * Modifier: Flags on blocks or elements. Use them to change appearance or behavior.
+    * __Block__: Standalone entity that is meaningful on its own.
+    * __Element__: Parts of a block and have no standalone meaning. They are semantically tied to its block.
+    * __Modifier__: Flags on blocks or elements. Use them to change appearance or behavior.
 * DEG's approach is to follow the general guidelines of BEM and it's syntax, though it is not strictly enforced, which is why it's referred to as Pseudo BEM here. For full documentation on the BEM methodology, reference out the [BEM website](http://getbem.com/).
 
 **Variables**
