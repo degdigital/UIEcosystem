@@ -33,7 +33,7 @@
 ## Code Style Guide
 
 ### HTML
-[HTML Standards]
+* Semantic Markup
 
 ### CSS
 **Organization**
@@ -85,8 +85,11 @@ css
     ```
 
 **Pseudo BEM**
-
-*[Pseudo BEM Description]
+* [BEM](http://getbem.com/) is a CSS methodology and syntax, that helps achieve reusable components. BEM stands for Block Element Modifier and consists of:
+    * Block: Standalone entity that is meaningful on its own.
+    * Element: Parts of a block and have no standalone meaning. They are semantically tied to its block.
+    * Modifier: Flags on blocks or elements. Use them to change appearance or behavior.
+* DEG's approach is to follow the general guidelines of BEM and it's syntax, though it is not strictly enforced, which is why it's referred to as Pseudo BEM here. For full documentation on the BEM methodology, reference out the [BEM website](http://getbem.com/).
 
 **Variables**
 
@@ -171,6 +174,8 @@ DEG uses the concept of Graded Browser Support, which defines the set of browser
 
 ### Accessibility
 [Accessibilty guidelines here]
+* Alt Tags
+* Aria Roles
 
 ### Performance
 Because speed and performance is a vital part of any website, DEG encourages the use of performance budgets to help guide design and development decisions.
