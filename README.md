@@ -2,7 +2,7 @@
 *DEG UI Code Standards, Design Patterns, Frameworks & Tooling*
 
 ## Table of Contents
-  1. [Code Standards](#code-standards)
+  1. [Code Style Guide](#code-style-guide)
     - [HTML](#html)
     - [CSS](#css)
     - [Javascript](#javascript)
@@ -27,9 +27,10 @@
     - [Testing](#testing)
 
 
-## Code Standards
+## Code Style Guide
 
 ### HTML
+[HTML Standards]
 
 ### CSS
 **Atomic CSS**
@@ -53,8 +54,6 @@ Classes should be lowercase and follow pseudo BEM practices
 ### Javascript
 **ES6**
 * Template Strings
-
-**DEGJS**
 
 ## Frameworks
 ### Skeletor
