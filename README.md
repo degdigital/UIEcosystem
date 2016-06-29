@@ -50,7 +50,40 @@ css
 |-- utilities/
 ```
 **Formatting**
-*
+* Selectors should use a Pseudo BEM methodology (See BEM below)
+* Use ID selectors sparingly, if at all
+* When using multiple selectors in a rule declaration, give each selector its own line.
+* Properties should be organized in the most logical order
+* When defining multiple properties, give each property its own line.
+
+**Bad Formatting**
+
+```css
+.selector{
+    property:value; property:value; }
+.selector, .selector, .selector {
+    // ...
+}
+#id {
+  // ...
+}
+```
+
+**Good Formatting**
+
+```css
+.selector {
+    property: value;
+    property: value;
+}
+
+.selector,
+.selector,
+.selector {
+    // ...
+}
+```
+
 **Pseudo BEM**
 
 Classes should be lowercase and follow pseudo BEM practices
