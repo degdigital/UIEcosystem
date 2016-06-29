@@ -19,11 +19,14 @@
     - [DEGJS](#degjs)
     - [jQuery](#jQuery)
   5. [Tooling](#tooling)
-    - [IDEs](#ides)
+    - [IDEs/Editors](#ides)
     - [CSS](#css-1)
     - [Javascript](#javascript-1)
-    - [ALM](#alm)
-    - [Version Control](#version-control)
+    - [Task Runners](#task-runners)
+    - [Visual Editors](#visual-editors)
+    - [Virtual Machines](#virtual-machines)
+    - [ALM/Version Control](#alm)
+    - [Continuous Integration](#continous-integration)
     - [Testing](#testing)
 
 
@@ -33,10 +36,21 @@
 [HTML Standards]
 
 ### CSS
-**Atomic CSS**
-* Modular
-* Organisation: Basics, Components, Templates, Pages
+**Organization**
 
+CSS should be organized into partials and follow DEG's modified Atomic CSS structure of Basics, Components, Templates, & Utilities. These partials will be processed using PostCSS and the available configuration options in Skeletor.
+```
+css
+|-- basics/
+|   |-- buttons.css
+|   |-- headings.css
+|   |-- ...
+|-- components/
+|-- templates/
+|-- utilities/
+```
+**Formatting**
+*
 **Pseudo BEM**
 
 Classes should be lowercase and follow pseudo BEM practices
@@ -129,6 +143,15 @@ Although projects do often present unique challenges, there are certain challeng
 
 ### Task Runners
 * Grunt
+
+### Visual Editors
+* Photoshop
+* Illustrator
+* IcoMoon
+
+### Virtual Machines
+* VirtualBox
+* Vagrant
 
 ### ALM / Version Control
 * JIRA
