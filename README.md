@@ -6,7 +6,7 @@
     - [HTML](#html)
     - [CSS](#css)
     - [Javascript](#javascript)
-  2. [Design Patterns](#design-patterns)
+  2. [Design Patterns & Considerations](#design-patterns--considerations)
     - [Atomic Design](#atomic-design)
     - [Browser Support](#browser-support)
     - [Accessibility](#accessibility)
