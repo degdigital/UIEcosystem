@@ -56,7 +56,7 @@ css
 * Properties should be organized in the most logical order
 * When defining multiple properties, give each property its own line.
 
-**Bad Formatting**
+Bad Formatting
 
 ```css
 .selector{
@@ -69,7 +69,7 @@ css
 }
 ```
 
-**Good Formatting**
+Good Formatting
 
 ```css
 .selector {
