@@ -56,33 +56,33 @@ css
 * Properties should be organized in the most logical order
 * When defining multiple properties, give each property its own line.
 
-Bad Formatting
+    __Bad Formatting__
 
-```css
-.selector{
-    property:value; property:value; }
-.selector, .selector, .selector {
-    // ...
-}
-#id {
-  // ...
-}
-```
+    ```css
+    .selector{
+        property:value; property:value; }
+    .selector, .selector, .selector {
+        // ...
+    }
+    #id {
+      // ...
+    }
+    ```
 
-Good Formatting
+    __Good Formatting__
 
-```css
-.selector {
-    property: value;
-    property: value;
-}
+    ```css
+    .selector {
+        property: value;
+        property: value;
+    }
 
-.selector,
-.selector,
-.selector {
-    // ...
-}
-```
+    .selector,
+    .selector,
+    .selector {
+        // ...
+    }
+    ```
 
 **Pseudo BEM**
 
@@ -93,7 +93,7 @@ Good Formatting
 *[variable naming structure/syntax]
 
 **Nested Selectors**
-* Following BEM or pseudo BEM should allow you to avoid nesting in most cases. When nesting does become needed, it should be kept as shallow as possible. A good code smell is to refactor and break out CSS that requires nesting beyond three levels deep.
+* Following BEM or pseudo BEM should allow you to avoid nesting in most cases. This creates CSS that is both easier to maintain and smaller in size. When nesting does become needed, it should be kept as shallow as possible. A good code smell is to refactor and break out CSS that requires nesting beyond three levels deep.
 
 **Breakpoints & Media Queries**
 * __Write Mobile First CSS.__ Authoring mobile-first styles results in smaller, simpler, more maintainable code and is in line with DEG's stance on progressive enhancement.
