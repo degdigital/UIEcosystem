@@ -68,6 +68,10 @@ Pattern Lab is a collection of tools to help you create atomic design systems. D
 
 DEGJS is a curated list of ES6-formatted JavaScript modules, encompassing front-end functionality and utilities, developed by the DEG UI team. All modules are hosted under our [DEGJS GitHub account](https://github.com/degjs), and are formatted to work with Babel, the JSPM package manager and its accompanying JavaScript loader, System.js.
 
+### jQuery
+
+__* Magento & Legacy Only *__ The ubiquitous javascript library. Many legacy projects as well as anything on the Magento platform will include the jQuery library. The DEG UI team recommends against using jQuery when possible.
+
 ## Design Patterns & Considerations
 
 ### Atomic Design
@@ -110,34 +114,29 @@ Although projects do often present unique challenges, there are certain challeng
 
 ## Tooling
 
-### IDEs
+### IDEs/Editors
 * Sublime Text
 * PHPStorm
+* Visual Studio
 
 ### CSS
-**PostCSS**
-
-**Legacy**
-* Sass
-* Compass
+* PostCSS
+* Legacy Projects: Sass/Compass
 
 ### Javascript
-**General**
 * JSPM - Package Management
 * SystemJS - Module Bundling
-* DEGJS
 
-**Magento**
-* jQuery
+### Task Runners
+* Grunt
 
-### ALM
+### ALM / Version Control
 * JIRA
 * Assembla
+* Git
 
-### Version Control
-**Git**
-
-**Git Workflows**
+### Continuous Integration
+* Jenkins
 
 ### Testing
 * BrowserStack
