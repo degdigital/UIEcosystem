@@ -48,6 +48,7 @@
     |-- templates/
     |-- utilities/
     ```
+
 **Formatting**
 * Selectors should use a Pseudo BEM methodology (See BEM below)
 * Use ID selectors sparingly, if at all
@@ -88,7 +89,7 @@
     * __Block__: Standalone entity that is meaningful on its own.
     * __Element__: Parts of a block and have no standalone meaning. They are semantically tied to its block.
     * __Modifier__: Flags on blocks or elements. Use them to change appearance or behavior.
-* DEG's approach is to follow the general guidelines of BEM and it's syntax, though it is not strictly enforced, which is why it's referred to as Pseudo BEM here. For full documentation on the BEM methodology, reference out the [BEM website](http://getbem.com/).
+* DEG's approach is to follow the general guidelines of BEM and it's syntax, though it is not strictly enforced, which is why it's referred to as Pseudo BEM here and throughout this document. For full documentation on the BEM methodology, reference the [BEM website](http://getbem.com/).
 
 **Variables**
 
