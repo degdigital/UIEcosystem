@@ -129,23 +129,23 @@
 **Javascript Hooks & State Classes**
 * Avoid binding to the same class in both your CSS and JavaScript.
 * Depending on your specific needs, we recommend creating Javascript hooks & state classes in 1 of 3 ways:
-    * `js-` prefix for hooks
+    `js-` prefix for hooks
 
-        ```html
-        <button class="button js-button">Action Button</button>
-        ```
+    ```html
+    <button class="button js-button">Action Button</button>
+    ```
 
-    * `is-` prefix for temporary state classes
+    `is-` prefix for temporary state classes
 
-        ```html
-        <button class="button is-active">Active Action Button State</button>
-        ```
+    ```html
+    <button class="button is-active">Active Action Button State</button>
+    ```
 
-    * `--is-` modifier for temporary state classes that are element dependant
+    `--is-` modifier for temporary state classes that are element dependant
 
-        ```html
-        <button class="button button--is-active">Active Action Button State</button>
-        ```
+    ```html
+    <button class="button button--is-active">Active Action Button State</button>
+    ```
 
 ### Javascript
 **ES6**
