@@ -130,6 +130,7 @@
 * Avoid binding to the same class in both your CSS and JavaScript.
 * Depending on your specific needs, we recommend creating Javascript hooks & state classes in 1 of 3 ways:
 
+
     `js-` prefix for hooks
 
     ```html
