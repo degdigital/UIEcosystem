@@ -130,15 +130,20 @@
 * Avoid binding to the same class in both your CSS and JavaScript.
 * Depending on your specific needs, we recommend creating Javascript hooks & state classes in 1 of 3 ways:
     * `js-` prefix for primary hooks
-        ```
+
+        ```html
         <button class="button js-some-action">Action Button</button>
         ```
+
     * `is-action` prefix for temporary state classes
-        ```
+
+        ```html
         <button class="button is-active">Active Action Button State</button>
         ```
+
     * `--is-action` modifier for temporary state classes that are element dependant
-        ```
+
+        ```html
         <button class="button button--is-active">Active Action Button State</button>
         ```
 
