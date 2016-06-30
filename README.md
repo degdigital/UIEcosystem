@@ -38,6 +38,7 @@
 ### CSS
 **Organization**
 * CSS should be organized into partials and follow DEG's modified Atomic CSS structure of Basics, Components, Templates, & Utilities. These partials will be processed using PostCSS and the available configuration options in Skeletor.
+
     ```
     css
     |-- basics/
