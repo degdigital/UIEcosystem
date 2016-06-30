@@ -37,18 +37,17 @@
 
 ### CSS
 **Organization**
-
-CSS should be organized into partials and follow DEG's modified Atomic CSS structure of Basics, Components, Templates, & Utilities. These partials will be processed using PostCSS and the available configuration options in Skeletor.
-```
-css
-|-- basics/
-|   |-- buttons.css
-|   |-- headings.css
-|   |-- ...
-|-- components/
-|-- templates/
-|-- utilities/
-```
+* CSS should be organized into partials and follow DEG's modified Atomic CSS structure of Basics, Components, Templates, & Utilities. These partials will be processed using PostCSS and the available configuration options in Skeletor.
+    ```
+    css
+    |-- basics/
+    |   |-- buttons.css
+    |   |-- headings.css
+    |   |-- ...
+    |-- components/
+    |-- templates/
+    |-- utilities/
+    ```
 **Formatting**
 * Selectors should use a Pseudo BEM methodology (See BEM below)
 * Use ID selectors sparingly, if at all
@@ -127,10 +126,21 @@ css
     ```
 * __Don’t use device dimensions to determine breakpoints.__ The device landscape is always changing, so today’s values might be moot even just a year down the road. The Web is inherently fluid, so it’s our job to create interfaces that look and function beautifully on any screen instead of in just a few arbitrary buckets.
 
-**Javascript Hooks**
-* js-
-* is-
-* --is-
+**Javascript Hooks & State Classes**
+* Avoid binding to the same class in both your CSS and JavaScript.
+* Depending on your specific needs, we recommend creating Javascript hooks & state classes in 1 of 3 ways:
+    * `js-` prefix for primary hooks
+        ```
+        <button class="button js-some-action">Action Button</button>
+        ```
+    * `is-action` prefix for temporary state classes
+        ```
+        <button class="button is-active">Active Action Button State</button>
+        ```
+    * `--is-action` modifier for temporary state classes that are element dependant
+        ```
+        <button class="button button--is-active">Active Action Button State</button>
+        ```
 
 ### Javascript
 **ES6**
