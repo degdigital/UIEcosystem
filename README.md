@@ -132,16 +132,16 @@
     * `js-` prefix for hooks
 
         ```html
-        <button class="button js-some-action">Action Button</button>
+        <button class="button js-button">Action Button</button>
         ```
 
-    * `is-action` prefix for temporary state classes
+    * `is-` prefix for temporary state classes
 
         ```html
         <button class="button is-active">Active Action Button State</button>
         ```
 
-    * `--is-action` modifier for temporary state classes that are element dependant
+    * `--is-` modifier for temporary state classes that are element dependant
 
         ```html
         <button class="button button--is-active">Active Action Button State</button>
