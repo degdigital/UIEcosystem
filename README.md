@@ -129,7 +129,7 @@
 **Javascript Hooks & State Classes**
 * Avoid binding to the same class in both your CSS and JavaScript.
 * Depending on your specific needs, we recommend creating Javascript hooks & state classes in 1 of 3 ways:
-    * `js-` prefix for primary hooks
+    * `js-` prefix for hooks
 
         ```html
         <button class="button js-some-action">Action Button</button>
