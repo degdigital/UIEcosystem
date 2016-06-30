@@ -121,8 +121,8 @@
 
      __Good: Point Scale__
     ```css
-    --color-blue-10: #005da8;
-    --color-blue-20: #00a0dd;
+    --color-blue-10: #00a0dd;
+    --color-blue-20: #005da8;
     --color-blue-30: #acd5f8;
     ```
 
