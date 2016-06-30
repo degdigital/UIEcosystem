@@ -51,23 +51,21 @@
     ```
 
 **Formatting**
-* Selectors should use a Pseudo BEM methodology (See BEM below)
 * Use ID selectors sparingly, if at all
 * When using multiple selectors in a rule declaration, give each selector its own line
 * Properties should be organized in the most logical order
 * When defining multiple properties, give each property its own line
 
     __Bad Formatting__
-
     ```css
     .selector{
-        property:value; property:value; }
-    .selector, .selector, .selector {
-        // ...
-    }
-    #id {
-      // ...
-    }
+            property:value; property:value; }
+        .selector, .selector, .selector {
+            // ...
+        }
+        #id {
+          // ...
+        }
     ```
 
     __Good Formatting__
@@ -94,7 +92,39 @@
 
 **Variables**
 
-*[variable naming structure/syntax]
+* Use CSS variables for consistancy and maintainablity of styles.
+* It is recommended that you use variables for color palettes, font properties, & timing functions. Additional variables may be created on an as needed basis.
+* Namespace all variables with `--property-group`.
+* Append a logical and easy to reference modifier to all variations: `-modifier`.
+* If a logical scale can be applied, `-point-scale` can be used as the modifier. If no logical scale can be applied, use logical modifiers i.e. `-light`.
+* Add a line break between different property group types.
+* There are no standardized guidelines for mapping variables to other variables, but it is strongly encouraged that mappings are kept consistant and easy to reference.
+
+    __Bad__
+    ```css
+    --blue: #005da8;
+    --blue2: #00a0dd;
+    --blue3: #acd5f8;
+    --timing: .25s;
+    --othertiming: 1s;
+    ```
+
+     __Good: Logicial Modifiers__
+    ```css
+    --color-blue: #005da8;
+    --color-blue-light: #00a0dd;
+    --color-blue-dark: #acd5f8;
+
+    --timing-fast: .25s;
+    --timing-slow: .1s;
+    ```
+
+     __Good: Point Scale__
+    ```css
+    --color-blue-10: #005da8;
+    --color-blue-20: #00a0dd;
+    --color-blue-30: #acd5f8;
+    ```
 
 **Nested Selectors**
 * Following BEM or pseudo BEM should allow you to avoid nesting in most cases. This creates CSS that is both easier to maintain and smaller in size. When nesting does become needed, it should be kept as shallow as possible. A good code smell is to refactor and break out CSS that requires nesting beyond three levels deep.
