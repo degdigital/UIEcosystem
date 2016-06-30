@@ -53,9 +53,9 @@
 **Formatting**
 * Selectors should use a Pseudo BEM methodology (See BEM below)
 * Use ID selectors sparingly, if at all
-* When using multiple selectors in a rule declaration, give each selector its own line.
+* When using multiple selectors in a rule declaration, give each selector its own line
 * Properties should be organized in the most logical order
-* When defining multiple properties, give each property its own line.
+* When defining multiple properties, give each property its own line
 
     __Bad Formatting__
 
