@@ -51,6 +51,7 @@
     ```
 
 **Formatting**
+* Use tabs (4 spaces) for indentation
 * Use ID selectors sparingly, if at all
 * When using multiple selectors in a rule declaration, give each selector its own line
 * Properties should be organized in the most logical order
