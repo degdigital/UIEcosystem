@@ -59,6 +59,7 @@
         </nav>
     </header>
     ```
+
 **Semantics**
 * Use semantic elements when possible. For example, use `<header>` elements for headers, `<p>` elements for paragraphs, `<button>` elements for buttons, etc.
 * Using HTML according to its purpose is important for accessibility, SEO, reuse, and code efficiency.
@@ -273,9 +274,7 @@ DEG uses a modified version of these levels to simplify development, tie in bett
 DEG uses the concept of Graded Browser Support, which defines the set of browsers that should receive a verified, usable experience. However, trying to deliver the same "A-grade" experience across all tested browsers is neither cost-effective nor common. We support a tiered approach to user experience design, development, and testing, and encourage each project to define their own tiers that serve their users and stakeholders best. For a more detailed explanation and a guide to help determine what browsers to support, view our [Browser Support Guide](https://docs.google.com/document/d/1RDcfLoOyj-zwz7JmFxV6KQVlZ_yuZhhSMornd-uikaE/edit#) on Google Docs.
 
 ### Accessibility
-[Accessibilty guidelines here]
-* Alt Tags
-* Aria Roles
+DEG Standards of Quality stipulate a minimum of WCAG 2.0 Level A accessibility conformance. However, some projects may have more strict accessibility needs. For WCAG 2.0 Level A development requirements, reference the [WCAG 2.0 Checklist](http://webaim.org/standards/wcag/checklist).
 
 ### Performance
 Because speed and performance is a vital part of any website, DEG encourages the use of performance budgets to help guide design and development decisions.
