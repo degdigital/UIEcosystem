@@ -367,6 +367,7 @@ Although projects do often present unique challenges, there are certain challeng
 ### Visual Editors
 * Photoshop
 * Illustrator
+* Sketch
 * IcoMoon
 
 ### Virtual Machines
