@@ -36,7 +36,7 @@
 **Formatting & Syntax**
 * Use tabs (4 spaces) for indentation.
 * Nested elements should be indented once.
-* Don’t omit optional closing tags (e.g. </li> or </body>).
+* Don’t omit optional closing tags (e.g. `</li>` or `</body>`).
 * Typically there is no need to specify a type when including CSS and JavaScript files as text/css and text/javascript are their respective defaults.
 
      __Bad Formatting__
