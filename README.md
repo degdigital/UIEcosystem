@@ -287,7 +287,6 @@
     }
     ```
 
-
 ### Javascript
 [JS CODE STYLE GUIDE HERE]
 
