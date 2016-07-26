@@ -188,7 +188,7 @@
         float: left;
         width: 50%;
     }
-    @media all and (max-width: 50em) {
+    @media all and (max-width: 800px) {
         .column {
             float: none;
             width: auto;
