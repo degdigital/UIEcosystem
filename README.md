@@ -33,13 +33,10 @@
 ## Code Style Guide
 
 ### HTML
-**HTML5 doctype**
-* HTML5 (HTML syntax) is preferred for all HTML documents.
-* Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page: `<!DOCTYPE html>`.
-
 **Formatting & Syntax**
-* Use tabs (4 spaces) for indentation
-* Nested elements should be indented once
+* Use tabs (4 spaces) for indentation.
+* Nested elements should be indented once.
+* Don’t omit optional closing tags (e.g. </li> or </body>).
 * Typically there is no need to specify a type when including CSS and JavaScript files as text/css and text/javascript are their respective defaults.
 
      __Bad Formatting__
@@ -59,6 +56,10 @@
     </header>
     ```
 
+
+**HTML5 doctype**
+* HTML5 (HTML syntax) is preferred for all HTML documents.
+* Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page: `<!DOCTYPE html>`.
 
 **Semantics**
 * Use semantic elements when possible. For example, use `<header>` elements for headers, `<p>` elements for paragraphs, `<button>` elements for buttons, etc.
@@ -100,6 +101,7 @@
 **Formatting**
 * Use tabs (4 spaces) for indentation
 * Use ID selectors sparingly, if at all
+* Use classes over generic element tags when possible
 * When using multiple selectors in a rule declaration, give each selector its own line
 * Properties should be organized in the most logical order
 * When defining multiple properties, give each property its own line
@@ -272,9 +274,20 @@
     <button class="button button--is-active">Active Action Button State</button>
     ```
 
+**Box Sizing**
+* Skeletor's default CSS reset resets `box-sizing` to `border-box` on the `html` selector and every other element `inherits` this value.
+
+    ```css
+    html {
+        box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+    ```
 ### Javascript
-**ES6**
-* Template Strings
+[JS CODE STYLE GUIDE HERE]
 
 ## Frameworks
 ### Skeletor
