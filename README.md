@@ -60,6 +60,7 @@
     </header>
     ```
 
+
 **Semantics**
 * Use semantic elements when possible. For example, use `<header>` elements for headers, `<p>` elements for paragraphs, `<button>` elements for buttons, etc.
 * Using HTML according to its purpose is important for accessibility, SEO, reuse, and code efficiency.
