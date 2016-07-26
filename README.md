@@ -33,7 +33,53 @@
 ## Code Style Guide
 
 ### HTML
-* Semantic Markup
+**HTML5 doctype**
+* HTML5 (HTML syntax) is preferred for all HTML documents.
+* Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page: `<!DOCTYPE html>`.
+
+**Formatting & Syntax**
+* Use tabs (4 spaces) for indentation
+* Nested elements should be indented once
+* Don't include a trailing slash in self-closing elements
+* Typically there is no need to specify a type when including CSS and JavaScript files as text/css and text/javascript are their respective defaults.
+
+     __Bad Formatting__
+    ```html
+    <header class="header header--primary">
+                <nav class="nav nav--primary">
+            // ...
+        </nav></header>
+    ```
+
+    __Good Formatting__
+    ```html
+    <header class="header header--primary">
+        <nav class="nav nav--primary">
+            // ...
+        </nav>
+    </header>
+    ```
+**Semantics**
+* Use semantic elements when possible. For example, use `<header>` elements for headers, `<p>` elements for paragraphs, `<button>` elements for buttons, etc.
+* Using HTML according to its purpose is important for accessibility, SEO, reuse, and code efficiency.
+
+    __Bad Semantics__
+    ```html
+    <div class="header header--primary">
+        <div class="nav nav--primary">
+            // ...
+        </div>
+    </div>
+    ```
+
+    __Good Semantics__
+    ```html
+    <header class="header header--primary">
+        <nav class="nav nav--primary">
+            // ...
+        </nav>
+    </header>
+    ```
 
 ### CSS
 **Organization**
@@ -128,10 +174,12 @@
     ```
 
 **Nested Selectors**
-* Following BEM or pseudo BEM should allow you to avoid nesting in most cases. This creates CSS that is both easier to maintain and smaller in size. When nesting does become needed, it should be kept as shallow as possible. A good code smell is to refactor and break out CSS that requires nesting beyond three levels deep.
+* Following BEM or pseudo BEM should allow you to avoid unnecessary nesting. This creates CSS that is both easier to maintain and smaller in size. When nesting does become needed, it should be kept as shallow as possible. A good code smell is to refactor and break out CSS that requires nesting beyond three levels deep.
 
 **Breakpoints & Media Queries**
 * __Write Mobile First CSS.__ Authoring mobile-first styles results in smaller, simpler, more maintainable code and is in line with DEG's stance on progressive enhancement.
+* __Don’t use device dimensions to determine breakpoints.__ The device landscape is always changing, so today’s values might be moot even just a year down the road. The Web is inherently fluid, so it’s our job to create interfaces that look and function beautifully on any screen instead of in just a few arbitrary buckets.
+* __Use `em`'s to define dimensions for media queries__. Avoid `px` and `rem` based units as `em`'s are the only units that [perform reliably across browsers](http://zellwk.com/blog/media-query-units/).
 
     __Bad__
 
@@ -157,7 +205,9 @@
         }
     }
     ```
-* __Don’t use device dimensions to determine breakpoints.__ The device landscape is always changing, so today’s values might be moot even just a year down the road. The Web is inherently fluid, so it’s our job to create interfaces that look and function beautifully on any screen instead of in just a few arbitrary buckets.
+
+**Vendor Prefixes**
+* Avoid using vendor prefixes within your authored CSS. Autoprefixer is available within Skeletor and should be configured to apply vendor prefixes based on a projects browser support through the build process.
 
 **Javascript Hooks & State Classes**
 * Avoid binding to the same class in both your CSS and JavaScript.
