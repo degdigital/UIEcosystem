@@ -40,7 +40,6 @@
 **Formatting & Syntax**
 * Use tabs (4 spaces) for indentation
 * Nested elements should be indented once
-* Don't include a trailing slash in self-closing elements
 * Typically there is no need to specify a type when including CSS and JavaScript files as text/css and text/javascript are their respective defaults.
 
      __Bad Formatting__
@@ -177,6 +176,45 @@
 
 **Nested Selectors**
 * Following BEM or pseudo BEM should allow you to avoid unnecessary nesting. This creates CSS that is both easier to maintain and smaller in size. When nesting does become needed, it should be kept as shallow as possible. A good code smell is to refactor and break out CSS that requires nesting beyond three levels deep.
+* When nesting is required, nesting order should be based on specificity.
+    1. __Properties applied to selector__: `property: value;`
+    2. __Element modifiers__: `:before`, `:hover`, `&--modifier`
+    3. __Elements__: `li`, `span`
+    4. __Classes__: `.nested-class`
+
+    __Bad Nesting Order__
+    ```css
+    .selector {
+        element {
+            // ...
+        }
+        property: value;
+        property: value;
+        .class {
+            // ...
+        }
+        &:before {
+            // ...
+        }
+    }
+    ```
+
+     __Good Nesting Order__
+    ```css
+    .selector {
+        property: value;
+        property: value;
+        &:before {
+            // ...
+        }
+        element {
+            // ...
+        }
+        .class {
+            // ...
+        }
+    }
+    ```
 
 **Breakpoints & Media Queries**
 * __Write Mobile First CSS.__ Authoring mobile-first styles results in smaller, simpler, more maintainable code and is in line with DEG's stance on progressive enhancement.
