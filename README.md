@@ -87,7 +87,7 @@
 ### CSS
 **PostCSS**
 * DEG utilizes [PostCSS](http://postcss.org/) to process CSS files and aims to write modern and future-proof CSS based on W3C specifications while avoiding the proprietary syntax of preproccesors whenever possible.
-* Skeletor comes preconfigured with our preferred out-of-the-box PostCSS plugins, but developers are encouraged to add new plugins as the need arises on a per-project basis, while keeping the overall goals of future-proof CSS in mind.
+* [Skeletor](http://github.com/degdigital/skeletor) comes preconfigured with our preferred out-of-the-box PostCSS plugins, but developers are encouraged to add new plugins as the need arises on a per-project basis, while keeping the overall goals of future-proof CSS in mind.
 
 **Organization**
 * CSS should be organized into partials and follow DEG's modified Atomic CSS structure of Basics, Components, Templates, & Utilities. These partials will be processed using PostCSS and the available configuration options in Skeletor.
