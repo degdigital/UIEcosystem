@@ -189,6 +189,7 @@
     * Overly specific
     * Not reusable
 
+
 * When nesting is required, nesting order should be based on specificity.
     1. __Properties applied to selector__: `property: value;`
     2. __Element modifiers__: `:before`, `:hover`, `&--modifier`
@@ -260,7 +261,7 @@
     ```
 
 **Vendor Prefixes**
-* Avoid using vendor prefixes within your authored CSS. Autoprefixer is available within Skeletor and should be configured to apply vendor prefixes based on a projects browser support through the build process.
+* Avoid using vendor prefixes within your authored CSS. [Autoprefixer](https://github.com/postcss/autoprefixer) is available within [Skeletor](https://github.com/degdigital/skeletor) and should be configured to apply vendor prefixes based on a projects browser support through the build process.
 
 **Javascript Hooks & State Classes**
 * Avoid binding to the same class in both your CSS and JavaScript.
@@ -317,12 +318,12 @@ While DEG doesn't maintain a specific code style guide in relation to Javascript
 Skeletor is a [Grunt](http://gruntjs.com)-powered, [Pattern Lab](http://patternlab.io)-centric, highly-customizable web project boilerplate and build tool created by the [DEG](http://www.degdigital.com) UI team. Skeletor uses [PostCSS](http://postcss.org) for CSS processing and [JSPM](http://jspm.io)/[SystemJS](https://github.com/systemjs/systemjs) for Javascript package management, module bundling/loading, and transpilation. Full Skeletor documentation is available [here](https://github.com/degdigital/skeletor).
 
 ### Pattern Lab
-Pattern Lab is a collection of tools to help you create atomic design systems. DEG uses Pattern Lab as a design & development tool, a prototyping & demo tool, and as an interactive style guide deliverable for clients. Although Pattern Lab comes with an out of the box partner starter kit, we have modified this kit to more closely resemble the types of projects we work on and practices we follow. Our modified version of Pattern Lab can be found within [Skeletor](https://github.com/degdigital/skeletor). Pattern Lab specific documentation can be found on the [Pattern Lab website](http://patternlab.io/).
+Pattern Lab is a collection of tools to help you create atomic design systems. DEG uses Pattern Lab as a design & development tool, a prototyping & demo tool, and as an interactive style guide deliverable for clients. Although Pattern Lab comes with an out of the box pattern starter kit, we have modified this kit to more closely resemble the types of projects we work on and practices we follow. Our modified version of Pattern Lab can be found within [Skeletor](https://github.com/degdigital/skeletor). Pattern Lab specific documentation can be found on the [Pattern Lab website](http://patternlab.io/).
 
 ## Libraries
 ### DEGJS
 
-DEGJS is a curated list of ES6-formatted JavaScript modules, encompassing front-end functionality and utilities, developed by the DEG UI team. All modules are hosted under our [DEGJS GitHub account](https://github.com/degjs), and are formatted to work with Babel, the JSPM package manager and its accompanying JavaScript loader, System.js.
+[DEGJS](https://github.com/degjs) is a curated list of ES6-formatted JavaScript modules, encompassing front-end functionality and utilities, developed by the DEG UI team. All modules are hosted under our [DEGJS GitHub account](https://github.com/degjs), and are formatted to work with Babel, the JSPM package manager and its accompanying JavaScript loader, System.js.
 
 ### jQuery
 
@@ -362,9 +363,9 @@ For more details on how and when DEG sets performance budgets, view our [Perform
 ### Detailed Design Patterns & Anti-Patterns
 Although projects do often present unique challenges, there are certain challenges we see repeated across many projects. Because of this, the DEG UI team maintains a set of client facing documentation on the best practices for using and implementing common design patterns & anti-patterns including:
 - [Carousels](https://docs.google.com/document/d/1iBiWISTsRwTv-Jc7VEJGHhVXnru8Tyf2YZ4olHvjg-g/edit)
-- [Hover Interactions](https://docs.google.com/document/d/1L_ppJEh24ly_R_LgC_9whqylc9FnkAokNAEJFuDLbY8/edit)
+- Hover Interactions
 - [Infinite Scrolling vs Pagination](https://docs.google.com/document/d/1C4XFaIfv2Pt0dyRjGYZVUTo5sTw-RzqYk8ingLuxfOI/edit)
-- [Mega Menus](https://docs.google.com/document/d/1l7t2MpYf1Ux-RtRyzD2NKWinuLwmD4IYFX8emtpJFcc/edit)
+- Mega Menus
 - [The Fold](https://docs.google.com/presentation/d/1baCcqMkYE0h3S7oP637ZMjK106bUpyHNRMw2NW7a4BE/edit?usp=drive_web)
 - [Web Fonts](https://docs.google.com/document/d/16_8FOMAAdCp2FL-vtSkj72uUVYpiBaYRUw0JrlAdpQE/edit)
 
