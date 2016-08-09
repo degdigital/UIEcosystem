@@ -38,6 +38,7 @@
 * Nested elements should be indented once.
 * Don’t omit optional closing tags (e.g. `</li>` or `</body>`).
 * Typically there is no need to specify a type when including CSS and JavaScript files as text/css and text/javascript are their respective defaults.
+* JavaScript files should be included at the bottom of a document whenever possible.
 
      __Bad Formatting__
     ```html
@@ -84,6 +85,10 @@
     ```
 
 ### CSS
+**PostCSS**
+* DEG utilizes [PostCSS](http://postcss.org/) to process CSS files and aims to write modern and future-proof CSS based on W3C specifications while avoiding the proprietary syntax of preproccesors whenever possible.
+* Skeletor comes preconfigured with our preferred out-of-the-box PostCSS plugins, but developers are encouraged to add new plugins as the need arises on a per-project basis, while keeping the overall goals of future-proof CSS in mind.
+
 **Organization**
 * CSS should be organized into partials and follow DEG's modified Atomic CSS structure of Basics, Components, Templates, & Utilities. These partials will be processed using PostCSS and the available configuration options in Skeletor.
 
@@ -177,7 +182,13 @@
     ```
 
 **Nested Selectors**
-* Following BEM or pseudo BEM should allow you to avoid unnecessary nesting. This creates CSS that is both easier to maintain and smaller in size. When nesting does become needed, it should be kept as shallow as possible. A good code smell is to refactor and break out CSS that requires nesting beyond three levels deep.
+* Following BEM or pseudo BEM should allow you to avoid unnecessary nesting. This creates CSS that is easier to maintain, less fragile, and smaller in size. When nesting does become needed, it should be kept as shallow as possible. A good rule of thumb is to nest selectors no more than three levels deep.
+
+    When selectors become more deeply nested than three levels, you're likely writing CSS that is:
+    * Strongly coupled to the HTML & fragile
+    * Overly specific
+    * Not reusable
+
 * When nesting is required, nesting order should be based on specificity.
     1. __Properties applied to selector__: `property: value;`
     2. __Element modifiers__: `:before`, `:hover`, `&--modifier`
@@ -288,7 +299,17 @@
     ```
 
 ### Javascript
-[JS CODE STYLE GUIDE HERE]
+While DEG doesn't maintain a specific code style guide in relation to Javascript, we do utilize es6 features and syntax and tend to follow the guidelines set out by airbnb in their [Javascript style guide](https://github.com/airbnb/javascript).
+
+**JSPM/SystemJS**
+* DEG utilizes [JSPM](http://jspm.io/) and [SystemJS](https://github.com/systemjs/systemjs) for Javascript package management, module bundling/loading, and transpilation. For more detailed information on how these tools are used, refer to the [Javscript section](https://github.com/degdigital/skeletor#javascript) of the Skeletor documentation.
+
+**Modules**
+* DEG utilizes Javascript modules to create a maintainable, reusable, and performant codebase in favor of a sprawling and interdependent codebase.
+* Small, self-contained modules with distinct functionality are preferred over large, all inclusive modules. This allows for modules that can be [shuffled, removed, or added as necessary](https://medium.freecodecamp.com/javascript-modules-a-beginner-s-guide-783f7d7a5fcc#.xi6wgrvv2), without disrupting the system as a whole.
+
+**Polyfilled Bundles**
+* In many cases, Javascript code will require certain feature polyfills in order to run correctly on legacy (or even modern) browsers. For delivering these polyfills to the client, DEG takes the [conditional-build approach](https://github.com/SlexAxton/yepnope.js#deprecation-notice) recommended by the yepnope.js team and others. For more details on how to generate conditional builds, refer to the [Polyfilled Bundles](https://github.com/degdigital/skeletor#polyfilled-bundles) section of the Skeletor documentation.
 
 ## Frameworks
 ### Skeletor
