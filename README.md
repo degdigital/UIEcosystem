@@ -305,7 +305,7 @@ While DEG doesn't maintain a specific code style guide in relation to Javascript
 * DEG utilizes [JSPM](http://jspm.io/) and [SystemJS](https://github.com/systemjs/systemjs) for Javascript package management, module bundling/loading, and transpilation. For more detailed information on how these tools are used, refer to the [Javscript section](https://github.com/degdigital/skeletor#javascript) of the Skeletor documentation.
 
 **Modules**
-* DEG utilizes Javascript modules to create a maintainable, reusable, and performant codebase in favor of a sprawling and interdependent codebase.
+* DEG utilizes Javascript modules to create a maintainable, reusable, and performant codebase in favor of a sprawling and interdependent one.
 * Small, self-contained modules with distinct functionality are preferred over large, all inclusive modules. This allows for modules that can be [shuffled, removed, or added as necessary](https://medium.freecodecamp.com/javascript-modules-a-beginner-s-guide-783f7d7a5fcc#.xi6wgrvv2), without disrupting the system as a whole.
 
 **Polyfilled Bundles**
