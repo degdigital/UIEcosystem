@@ -418,6 +418,10 @@ Pull Requests are both a great way to maintain high quality code and an opportun
 
 * It's much better to submit small pull requests often. Shoot to submit at least one Pull Request (PR) per day. If your ticket is bigger than that. Try to break it into smaller chunks. It's much easier for a reviewer to read through a four file change than it is to read through a massive refactor.
 
+* Link the Pull Request to a ticket if there is one. You can link in most source control by just noting the ticket number---#542. In other situations, drop a URL. This gives the reviewer some feedback.
+
+* If there is no issue to link to, leave a brief explanation on why you are submitting the PR. This help the reviewer, but it also helps it later if someone is trying to figure out why a piece of code was changed.
+
 **Reviewing a Pull Request**
 
 * Who can review? Simple, everyone should review code. If you are new to a project, you'll get a feeling for the structure other projects. If you are experienced, you'll be able to offer more insights.
@@ -431,6 +435,12 @@ Pull Requests are both a great way to maintain high quality code and an opportun
 * Remember to be polite. As [one guideline says](https://github.com/thoughtbot/guides/tree/master/code-review) "Accept that many programming decisions are opinions. Discuss tradeoffs, which you prefer, and reach a resolution quickly."
 
 * We are all learning. As long as the code does not violate agreed standards, the author has a right to use whatever solution they want.
+
+* If possible, don't just leave a comment about a potential issue, recommend a fix. Sketch the solution if possible.
+
+* If you think there is a better solution, but are not sure, you can say that. Just note that it is a gut feeling and the code may be fine.
+
+* A comment is the start of a conversation, you may need to clarify and expand on your suggestions.
 
 * For more guidelines on review code, see the [thoughtbot guide](https://github.com/thoughtbot/guides/tree/master/code-review#everyone) and the guide by [github](https://github.com/blog/1943-how-to-write-the-perfect-pull-request).
 
@@ -507,8 +517,29 @@ function createSidebar(data) {
   Reviewer:
   > Looks like you forgot to return the total after running the reduce function. That'll return `undefined` everytime.
   
+  * Updating documentation and tests
+  
+  Reviewer:
+  > Looks good, but you should probably add a note to the README.
+  
   * And more 
   
   There are many more things you may notice. It's ok to ask just remember to be polite.
-  ```
-    
+ 
+ **Receiving Feedback**
+ 
+ * Assume everyone is acting in good faith. It's hard to communicate tone on the web. So assume that everyone is giving suggestions in a compassionate manner. It's almost certainly true.
+ 
+ * You have the right to say no. As long as you are not violating an agreed upon set of standards, it's your code. But if you disagree just note that you read the comment, but prefer to keep it how it is. It's helpful if you can give a justification---"I think a for loop communicates a little more clearly than a reduce function"---but it's not mandatory.
+ 
+ * If you like a suggestion, but do not have time, create an issue or leave a TODO statement in the code.
+ 
+ Reviewer:
+> You should consider a reusable function
+
+  You:
+> I think that's a good idea, but this code fixes a bug on production and needs to go out. I'm leaving a TODO note in the code so I can catch it next time.
+
+**Finalizing**
+
+* After the reviewer has approved. Close the PR and make any finalizations such as updating a tag or publishing to npm.
