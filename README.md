@@ -540,6 +540,9 @@ function createSidebar(data) {
   You:
 > I think that's a good idea, but this code fixes a bug on production and needs to go out. I'm leaving a TODO note in the code so I can catch it next time.
 
+**Updating A Pull Request**
+* Submit any changes on the same branch as the original PR. It will update the PR code and maintain the conversation. It will also alert reviewers that you made a change.
+
 **Finalizing**
 
 * After the reviewer has approved. Close the PR and make any finalizations such as updating a tag or publishing to npm.
