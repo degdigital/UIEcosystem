@@ -28,6 +28,7 @@
     - [ALM/Version Control](#alm)
     - [Continuous Integration](#continous-integration)
     - [Testing](#testing)
+    - [Reviews and Pull Requests](#pull-requests)
 
 
 ## Code Style Guide
@@ -409,3 +410,20 @@ Although projects do often present unique challenges, there are certain challeng
 
 ### Testing
 * BrowserStack
+
+### Pull Requests
+Pull Requests are both a great way to maintain high quality code and an opportunity to learn from each other. Here are a few best practices to get you started:
+
+**Submitting a Pull Request**
+
+* It's much better to submit small pull requests often. Shoot to submit at least one Pull Request (PR) per day. If your ticket is bigger than that. Try to break it into smaller chunks. It's much easier for a reviewer to read through a four file change than it is to read through a massive refactor.
+
+**Reviewing a Pull Request**
+
+* Who can review? Simple, everyone should review code. If you are new to a project, you'll get a feeling for the structure other projects. If you are experienced, you'll be able to offer more insights.
+
+* Each project will need to decide who is able to officially approve a request. If you are principle reviewer, __try to finish a review within 24 hours__. When you approve a PR, leave a comment saying it looks good or a simple :+1:. Some systems have official approval buttons.
+
+* Merging a pull request is the responsibility of the person who opened the PR. Why? There may be additional tasks such as deploying or updating a tag. 
+
+* When reviewing, open the code in a browser if possible. It can be hard to grasp a change until you see it live.
