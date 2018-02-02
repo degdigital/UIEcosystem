@@ -427,3 +427,88 @@ Pull Requests are both a great way to maintain high quality code and an opportun
 * Merging a pull request is the responsibility of the person who opened the PR. Why? There may be additional tasks such as deploying or updating a tag. 
 
 * When reviewing, open the code in a browser if possible. It can be hard to grasp a change until you see it live.
+
+* Remember to be polite. As [one guideline says](https://github.com/thoughtbot/guides/tree/master/code-review) "Accept that many programming decisions are opinions. Discuss tradeoffs, which you prefer, and reach a resolution quickly."
+
+* We are all learning. As long as the code does not violate agreed standards, the author has a right to use whatever solution they want.
+
+* For more guidelines on review code, see the [thoughtbot guide](https://github.com/thoughtbot/guides/tree/master/code-review#everyone) and the guide by [github](https://github.com/blog/1943-how-to-write-the-perfect-pull-request).
+
+**What To Look for When Reviewing Code**
+
+* There are some things that must be completed before code can be accepted. These include following linting rules and testing requirements if applicable.
+
+* Syntax suggestions:
+```javascript
+const settings = Object.assign({}, defaults, options);
+```
+  A review might say:
+  > Consider using object spread:
+```javascript
+const settings = {
+  ...defaults,
+  ...options
+}
+```
+
+* Code Reuse
+```javascript
+function getNames(people) {
+  return people.map(person => person.name);
+}
+
+function getAges(people) {
+  return people.map(person => person.age);
+}
+```
+Reviewer:
+> You should consider a reusable function
+```javascript
+function extractField(group, field) {
+  return group.map(item => item[field]);
+}
+
+getNames(people) {
+ return extractField(people, 'names')
+}
+```
+
+* Readability
+```javascript
+function createSidebar(data) {
+ let small = true;
+ let sidebar;
+ if(data.length > 20) {
+   small = false;
+ }
+ // 50 more lines of data manipulation
+```
+ Reviewer:
+ > I get a little lost on this function. Could you split it up?
+ 
+ * Incorporating libraries
+ ```javascript
+ // File someproject/bankingForm.js
+ function checkPassword(element, rules) {
+ // check password for strength
+ }
+ ```
+ Reviewer:
+ > We have a library called [Password Strength](https://github.com/DEGJS/passwordStrength) you might check to see if that would work in this situation.
+ 
+ * Catching potential bugs
+ ```javascript
+ function getTotalMileage(reports) {
+   reports.reduce((total, report) => {
+     return total + report.miles
+    }, 0)
+  }
+  ```
+  Reviewer:
+  > Looks like you forgot to return the total after running the reduce function. That'll return `undefined` everytime.
+  
+  * And more 
+  
+  There are many more things you may notice. It's ok to ask just remember to be polite.
+  ```
+    
