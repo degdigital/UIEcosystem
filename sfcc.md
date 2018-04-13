@@ -301,17 +301,8 @@
     ```
 
 ### Javascript
-While DEG doesn't maintain a specific code style guide in relation to Javascript, we do utilize es6 features and syntax and tend to follow the guidelines set out by airbnb in their [Javascript style guide](https://github.com/airbnb/javascript).
-
-**JSPM/SystemJS**
-* DEG utilizes [JSPM](http://jspm.io/) and [SystemJS](https://github.com/systemjs/systemjs) for Javascript package management, module bundling/loading, and transpilation. For more detailed information on how these tools are used, refer to the [Javscript section](https://github.com/degdigital/skeletor#javascript) of the Skeletor documentation.
-
-**Modules**
-* DEG utilizes Javascript modules to create a maintainable, reusable, and performant codebase rather than a sprawling and interdependent one.
-* Small, self-contained modules with distinct functionality are preferred over large, all inclusive modules. This allows for modules that can be [shuffled, removed, or added as necessary](https://medium.freecodecamp.com/javascript-modules-a-beginner-s-guide-783f7d7a5fcc#.xi6wgrvv2), without disrupting the system as a whole.
-
-**Polyfilled Bundles**
-* In many cases, Javascript code will require certain feature polyfills in order to run correctly on legacy (or even modern) browsers. For delivering these polyfills to the client, DEG takes the [conditional-build approach](https://github.com/SlexAxton/yepnope.js#deprecation-notice) recommended by the yepnope.js team and others. For more details on how to generate conditional builds, refer to the [Polyfilled Bundles](https://github.com/degdigital/skeletor#polyfilled-bundles) section of the Skeletor documentation.
+SFCC projects will use the JS standards (jQuery, modular JS combined into app.js) of Site Genesis.
+The following standards will be applied to javascript written by UI Team members:
 
 ## Frameworks
 ### Skeletor
@@ -319,16 +310,17 @@ While DEG doesn't maintain a specific code style guide in relation to Javascript
 Skeletor is a [Grunt](http://gruntjs.com)-powered, [Pattern Lab](http://patternlab.io)-centric, highly-customizable web project boilerplate and build tool created by the [DEG](http://www.degdigital.com) UI team. Skeletor uses [PostCSS](http://postcss.org) for CSS processing and [JSPM](http://jspm.io)/[SystemJS](https://github.com/systemjs/systemjs) for Javascript package management, module bundling/loading, and transpilation. Full Skeletor documentation is available [here](https://github.com/degdigital/skeletor).
 
 ### Pattern Lab
-Pattern Lab is a collection of tools to help you create atomic design systems. DEG uses Pattern Lab as a design & development tool, a prototyping & demo tool, and as an interactive style guide deliverable for clients. Although Pattern Lab comes with an out of the box pattern starter kit, we have modified this kit to more closely resemble the types of projects we work on and practices we follow. Our modified version of Pattern Lab can be found within [Skeletor](https://github.com/degdigital/skeletor). Pattern Lab specific documentation can be found on the [Pattern Lab website](http://patternlab.io/).
+Rather than being an engine to describe the whole site, SFCC UI engineers may choose to use PatternLab to build custom pages and content areas, ensuring that the markup used is in source and consistent.
+PatternLab is not used to duplicate Site Genesis, because the markup is not consistent across versions and implimentations.
 
 ## Libraries
 ### DEGJS
 
-[DEGJS](https://github.com/degjs) is a curated list of ES6-formatted JavaScript modules, encompassing front-end functionality and utilities, developed by the DEG UI team. All modules are hosted under our [DEGJS GitHub account](https://github.com/degjs), and are formatted to work with Babel, the JSPM package manager and its accompanying JavaScript loader, System.js.
+SFCC projects will not use DEGJS int he current incarnations of Site Genesis.
 
 ### jQuery
 
-__* Magento & Legacy Only *__ The ubiquitous javascript library. Many legacy projects as well as anything on the Magento platform will include the jQuery library. The DEG UI team recommends against using jQuery when possible.
+SFCC UI team members will use jQuery as long as it is a core part of Site Genesis.
 
 ## Design Patterns & Considerations
 
@@ -353,13 +345,7 @@ DEG uses the concept of Graded Browser Support, which defines the set of browser
 DEG Standards of Quality stipulate a minimum of WCAG 2.0 Level A accessibility conformance. However, some projects may have more strict accessibility needs. For WCAG 2.0 Level A development requirements, reference the [WCAG 2.0 Checklist](http://webaim.org/standards/wcag/checklist).
 
 ### Performance
-Because speed and performance is a vital part of any website, DEG encourages the use of performance budgets to help guide design and development decisions.
-
-A performance budget is like any other project budget: it defines a clear goal that the project can be evaluated against to determine success. More specifically, a performance budget sets limits for individual pages of a website that should not be exceeded. These limits can be expressed in the form of several metrics, such as how long it takes for a page to load and how many kilobytes a page weighs.
-A performance budget helps you choose how to display content or define functionality. It does not dictate what content should be displayed. Removing something important to decrease page weight is not a good performance strategy.
-The overall benefit of a performance budget is a fast, lightweight website.
-
-For more details on how and when DEG sets performance budgets, view our [Performance Budget Guide](https://docs.google.com/document/d/1JobZThkKpRAtSGHGZ7aCJ5Ub_1q2SJqohDPjQmjeLiE/edit) on Google Docs.
+In addition to the DEG UI Team performance specifications, the SFCC UI team will also follow these additional guidelines:
 
 ### Detailed Design Patterns & Anti-Patterns
 Although projects do often present unique challenges, there are certain challenges we see repeated across many projects. Because of this, the DEG UI team maintains a set of client facing documentation on the best practices for using and implementing common design patterns & anti-patterns including:
@@ -424,6 +410,6 @@ Pull Requests are both a great way to maintain high quality code and an opportun
 
 * Each project will need to decide who is able to officially approve a request. If you are principle reviewer, __try to finish a review within 24 hours__. When you approve a PR, leave a comment saying it looks good or a simple :+1:. Some systems have official approval buttons.
 
-* Merging a pull request is the responsibility of the person who opened the PR. Why? There may be additional tasks such as deploying or updating a tag. 
+* Merging a pull request is the responsibility of the person who opened the PR. Why? There may be additional tasks such as deploying or updating a tag.
 
 * When reviewing, open the code in a browser if possible. It can be hard to grasp a change until you see it live.
