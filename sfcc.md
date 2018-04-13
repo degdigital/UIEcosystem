@@ -1,5 +1,5 @@
-# UI Ecosystem
-*DEG UI Code Standards, Design Patterns, Frameworks & Tooling*
+# UI Ecosystem - Sales Force Commerce Cloud
+*Addendum to DEG UI Code Standards, Design Patterns, Frameworks & Tooling for SFCC Projects*
 
 ## Table of Contents
   1. [Code Style Guide](#code-style-guide)
