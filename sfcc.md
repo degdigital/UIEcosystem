@@ -1,6 +1,8 @@
 # UI Ecosystem - Sales Force Commerce Cloud
 *Addendum to DEG UI Code Standards, Design Patterns, Frameworks & Tooling for SFCC Projects*
 
+Unless otherwise mentioned, all the contents of the main DEG UI document apply to SFCC. This document only modifies the main DEG UI document.
+
 ## Table of Contents
   1. [Code Style Guide](#code-style-guide)
     - [HTML](#html)
@@ -8,10 +10,8 @@
     - [Javascript](#javascript)
   2. [Design Patterns & Considerations](#design-patterns--considerations)
     - [Atomic Design](#atomic-design)
-    - [Browser Support](#browser-support)
     - [Accessibility](#accessibility)
     - [Performance](#performance)
-    - [Detailed Design Patterns & Anti-Patterns](#detailed-design-patterns--anti-patterns)
   3. [Frameworks](#frameworks)
     - [Skeletor](#skeletor)
     - [Pattern Lab](#pattern-lab)
@@ -24,7 +24,6 @@
     - [Javascript](#javascript-1)
     - [Task Runners](#task-runners)
     - [Visual Editors](#visual-editors)
-    - [Virtual Machines](#virtual-machines)
     - [ALM/Version Control](#alm)
     - [Continuous Integration](#continous-integration)
     - [Testing](#testing)
@@ -310,7 +309,7 @@ The following standards will be applied to javascript written by UI Team members
 Skeletor is a [Grunt](http://gruntjs.com)-powered, [Pattern Lab](http://patternlab.io)-centric, highly-customizable web project boilerplate and build tool created by the [DEG](http://www.degdigital.com) UI team. Skeletor uses [PostCSS](http://postcss.org) for CSS processing and [JSPM](http://jspm.io)/[SystemJS](https://github.com/systemjs/systemjs) for Javascript package management, module bundling/loading, and transpilation. Full Skeletor documentation is available [here](https://github.com/degdigital/skeletor).
 
 ### Pattern Lab
-Rather than being an engine to describe the whole site, SFCC UI engineers may choose to use PatternLab to build custom pages and content areas, ensuring that the markup used is in source and consistent.
+Rather than being an engine to describe the whole site, SFCC UI engineers may choose to use PatternLab to build custom pages and content areas, ensuring that the markup used is in source and consistent. 
 PatternLab is not used to duplicate Site Genesis, because the markup is not consistent across versions and implimentations.
 
 ## Libraries
@@ -338,78 +337,46 @@ DEG uses a modified version of these levels to simplify development, tie in bett
 - __Templates__: Groups of components combined together to create pages.
 - __Pages__: Specific instances of templates.
 
-### Browser Support
-DEG uses the concept of Graded Browser Support, which defines the set of browsers that should receive a verified, usable experience. However, trying to deliver the same "A-grade" experience across all tested browsers is neither cost-effective nor common. We support a tiered approach to user experience design, development, and testing, and encourage each project to define their own tiers that serve their users and stakeholders best. For a more detailed explanation and a guide to help determine what browsers to support, view our [Browser Support Guide](https://docs.google.com/document/d/1RDcfLoOyj-zwz7JmFxV6KQVlZ_yuZhhSMornd-uikaE/edit#) on Google Docs.
-
 ### Accessibility
-DEG Standards of Quality stipulate a minimum of WCAG 2.0 Level A accessibility conformance. However, some projects may have more strict accessibility needs. For WCAG 2.0 Level A development requirements, reference the [WCAG 2.0 Checklist](http://webaim.org/standards/wcag/checklist).
+In addition to the DEG UI Team performance specifications, the SFCC UI team will also follow these additional guidelines:
+*
 
 ### Performance
 In addition to the DEG UI Team performance specifications, the SFCC UI team will also follow these additional guidelines:
-
-### Detailed Design Patterns & Anti-Patterns
-Although projects do often present unique challenges, there are certain challenges we see repeated across many projects. Because of this, the DEG UI team maintains a set of client facing documentation on the best practices for using and implementing common design patterns & anti-patterns including:
-- [Carousels](https://docs.google.com/document/d/1iBiWISTsRwTv-Jc7VEJGHhVXnru8Tyf2YZ4olHvjg-g/edit)
-- [Designing For Touch](https://docs.google.com/document/d/1xncXc-5xsy9DWM0NXOBsHlwndP-51Ff_WiG72VXxv2s/)
-- [Hover Interactions](https://docs.google.com/document/d/1L_ppJEh24ly_R_LgC_9whqylc9FnkAokNAEJFuDLbY8/edit)
-- [Infinite Scrolling vs Pagination](https://docs.google.com/document/d/1C4XFaIfv2Pt0dyRjGYZVUTo5sTw-RzqYk8ingLuxfOI/edit)
-- Mega Menus [In Progress]
-- [The Fold](https://docs.google.com/presentation/d/1baCcqMkYE0h3S7oP637ZMjK106bUpyHNRMw2NW7a4BE/edit?usp=drive_web)
-- [Web Fonts](https://docs.google.com/document/d/16_8FOMAAdCp2FL-vtSkj72uUVYpiBaYRUw0JrlAdpQE/edit)
-- [Forms Don't Have To Suck](https://docs.google.com/presentation/d/1SLLszWMKQjiKtF7odlrWGbUy7hl6l5C4VHK923w_zQE/edit)
+*
 
 ## Tooling
 
 ### IDEs/Editors
 * Sublime Text
-* PHPStorm
-* Visual Studio
+* Eclipse
 
 ### CSS
-* PostCSS
-* Legacy Projects: Sass/Compass
+* SASS
+* PostCSS if implimented
 
 ### Javascript
-* JSPM - Package Management
-* SystemJS - Module Bundling
+* None, though implimentation of an outside JS framework (such as React) may be possible. In this case, follow the recommendations of the main DEG UI document.
 
 ### Task Runners
+* Gulp
 * Grunt
 
 ### Visual Editors
 * Photoshop
-* Illustrator
-* Sketch
-* IcoMoon
+* FontAwesome
 
 ### Virtual Machines
-* VirtualBox
-* Vagrant
+* N/A
 
 ### ALM / Version Control
-* JIRA
-* Assembla
-* Git
+* BitBucket
 
 ### Continuous Integration
-* Jenkins
+* None Yet
 
 ### Testing
 * BrowserStack
 
 ### Pull Requests
-Pull Requests are both a great way to maintain high quality code and an opportunity to learn from each other. Here are a few best practices to get you started:
-
-**Submitting a Pull Request**
-
-* It's much better to submit small pull requests often. Shoot to submit at least one Pull Request (PR) per day. If your ticket is bigger than that. Try to break it into smaller chunks. It's much easier for a reviewer to read through a four file change than it is to read through a massive refactor.
-
-**Reviewing a Pull Request**
-
-* Who can review? Simple, everyone should review code. If you are new to a project, you'll get a feeling for the structure other projects. If you are experienced, you'll be able to offer more insights.
-
-* Each project will need to decide who is able to officially approve a request. If you are principle reviewer, __try to finish a review within 24 hours__. When you approve a PR, leave a comment saying it looks good or a simple :+1:. Some systems have official approval buttons.
-
-* Merging a pull request is the responsibility of the person who opened the PR. Why? There may be additional tasks such as deploying or updating a tag.
-
-* When reviewing, open the code in a browser if possible. It can be hard to grasp a change until you see it live.
+* SFCC Frontend developers should do their best to follow the pull request standards set up in the main DEG UI document.
