@@ -88,9 +88,8 @@ Unless otherwise mentioned, all the contents of the main DEG UI document apply t
 * Use ID selectors sparingly. Do not refactor existing CSS selectors to remove IDs, but try not to write new selectors based around IDs.
 * Use classes over generic element tags when possible.
 * When using multiple selectors in a rule declaration, give each selector its own line.
-* Properties should be organized in the most logical order
-* When defining multiple properties, give each property its own line
-* Avoid unnecessary nesting.
+* Properties should be organized in the most logical order.
+* When defining multiple properties, give each property its own line.
 * CSS Formatting can be applied/enforced with the Sublime Plugin CSS Format and then using the command `Format CSS: Expanded`. Because of the plugin, Site Genesis code should be formatted quickly and easily, and should be updated and commited before making modifications to the files to make code reviews easier.
 
     __Bad Formatting__
@@ -126,7 +125,6 @@ Unless otherwise mentioned, all the contents of the main DEG UI document apply t
 **Variables**
 * Use CSS variables for consistancy and maintainablity of styles.
 * It is recommended that you use variables for color palettes, font properties, & timing functions. Additional variables may be created on an as needed basis.
-* Namespace all variables with `--property-group`.
 * Append a logical and easy to reference modifier to all variations: `-modifier`.
 * If a logical scale can be applied, `-point-scale` can be used as the modifier. If no logical scale can be applied, use logical modifiers i.e. `-light`.
 * Add a line break between different property group types.
@@ -134,44 +132,34 @@ Unless otherwise mentioned, all the contents of the main DEG UI document apply t
 
     __Bad__
     ```css
-    --blue: #005da8;
-    --blue2: #00a0dd;
-    --blue3: #acd5f8;
-    --timing: .25s;
-    --othertiming: 1s;
+    $blue: #005da8;
+    $blue2: #00a0dd;
+    $blue3: #acd5f8;
+    $timing: .25s;
+    $othertiming: 1s;
     ```
 
      __Good: Logicial Modifiers__
     ```css
-    --color-blue: #005da8;
-    --color-blue-light: #00a0dd;
-    --color-blue-dark: #acd5f8;
+    $color-blue: #005da8;
+    $color-blue-light: #00a0dd;
+    $color-blue-dark: #acd5f8;
 
-    --timing-fast: .25s;
-    --timing-slow: .1s;
+    $timing-fast: .25s;
+    $timing-slow: .1s;
     ```
 
      __Good: Point Scale__
     ```css
-    --color-blue-10: #00a0dd;
-    --color-blue-20: #005da8;
-    --color-blue-30: #acd5f8;
+    $color-blue-10: #00a0dd;
+    $color-blue-20: #005da8;
+    $color-blue-30: #acd5f8;
     ```
 
 **Nested Selectors**
-* Following BEM or pseudo BEM should allow you to avoid unnecessary nesting. This creates CSS that is easier to maintain, less fragile, and smaller in size. When nesting does become needed, it should be kept as shallow as possible. A good rule of thumb is to nest selectors no more than three levels deep.
+* Following BEM or pseudo BEM should allow you to avoid unnecessary nesting. This creates CSS that is easier to maintain, less fragile, and smaller in size. When nesting does become needed, it should be kept as shallow as possible. A good rule of thumb is to nest selectors __no more than three levels deep__. Existing Site Genesis CSS doesn't need to be rewritten unless it is also being refactored.
 
-    When selectors become more deeply nested than three levels, you're likely writing CSS that is:
-    * Strongly coupled to the HTML & fragile
-    * Overly specific
-    * Not reusable
-
-
-* When nesting is required, nesting order should be based on specificity.
-    1. __Properties applied to selector__: `property: value;`
-    2. __Element modifiers__: `:before`, `:hover`, `&--modifier`
-    3. __Elements__: `li`, `span`
-    4. __Classes__: `.nested-class`
+* When nesting is required, nesting order should be based on specificity. Existing Site Genesis CSS doesn't need to be rewritten unless it is also being refactored.
 
     __Bad Nesting Order__
     ```css
@@ -208,6 +196,7 @@ Unless otherwise mentioned, all the contents of the main DEG UI document apply t
     ```
 
 **Breakpoints & Media Queries**
+* We need something here
 * __Write Mobile First CSS.__ Authoring mobile-first styles results in smaller, simpler, more maintainable code and is in line with DEG's stance on progressive enhancement.
 * __Don’t use device dimensions to determine breakpoints.__ The device landscape is always changing, so today’s values might be moot even just a year down the road. The Web is inherently fluid, so it’s our job to create interfaces that look and function beautifully on any screen instead of in just a few arbitrary buckets.
 * __Use `em`'s to define dimensions for media queries__. Avoid `px` and `rem` based units as `em`'s are the only units that [perform reliably across browsers](http://zellwk.com/blog/media-query-units/).
@@ -238,10 +227,10 @@ Unless otherwise mentioned, all the contents of the main DEG UI document apply t
     ```
 
 **Vendor Prefixes**
-* Avoid using vendor prefixes within your authored CSS. [Autoprefixer](https://github.com/postcss/autoprefixer) is available within [Skeletor](https://github.com/degdigital/skeletor) and should be configured to apply vendor prefixes based on a projects browser support through the build process.
+* Avoid using vendor prefixes within your authored CSS. Make a note, however, that Autoprefixer may vary from the developer boxes and the staging CSS output.
 
 **Javascript Hooks & State Classes**
-* Avoid binding to the same class in both your CSS and JavaScript.
+* Avoid binding to the same class in both your CSS and JavaScript for custom written code and Site Genesis refactors.
 * Depending on your specific needs, we recommend creating Javascript hooks & state classes in 1 of 3 ways:
 
 
@@ -264,17 +253,7 @@ Unless otherwise mentioned, all the contents of the main DEG UI document apply t
     ```
 
 **Box Sizing**
-* Skeletor's default CSS reset resets `box-sizing` to `border-box` on the `html` selector and every other element `inherits` this value.
-
-    ```css
-    html {
-        box-sizing: border-box;
-    }
-
-    *, *:before, *:after {
-        box-sizing: inherit;
-    }
-    ```
+* Site Genesis uses the same Box-Sizing reset as Skeletor.
 
 ### Javascript
 SFCC projects will use the JS standards (jQuery, modular JS combined into app.js) of Site Genesis.
