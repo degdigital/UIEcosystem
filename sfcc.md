@@ -34,11 +34,9 @@ Unless otherwise mentioned, all the contents of the main DEG UI document apply t
 
 ### HTML
 **Formatting & Syntax**
-* Use tabs (4 spaces) for indentation.
-* Nested elements should be indented once.
+* Use tabs (4 spaces) for indentation. This can be set in the browser and converted/enforced in sublime text with `Indention: Convert to Tabs`. Site genesis files should converted when editied.
+* Nested elements should be indented once. Indention rules can be modified for `ISML` tags if the UI Dev chooses.
 * Don’t omit optional closing tags (e.g. `</li>` or `</body>`).
-* Typically there is no need to specify a type when including CSS and JavaScript files as text/css and text/javascript are their respective defaults.
-* JavaScript files should be included at the bottom of a document whenever possible.
 
      __Bad Formatting__
     ```html
@@ -57,14 +55,8 @@ Unless otherwise mentioned, all the contents of the main DEG UI document apply t
     </header>
     ```
 
-
-**HTML5 doctype**
-* HTML5 (HTML syntax) is preferred for all HTML documents.
-* Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page: `<!DOCTYPE html>`.
-
 **Semantics**
-* Use semantic elements when possible. For example, use `<header>` elements for headers, `<p>` elements for paragraphs, `<button>` elements for buttons, etc.
-* Using HTML according to its purpose is important for accessibility, SEO, reuse, and code efficiency.
+* Use semantic elements when editing or creating new elements.
 
     __Bad Semantics__
     ```html
@@ -86,30 +78,20 @@ Unless otherwise mentioned, all the contents of the main DEG UI document apply t
 
 ### CSS
 **PostCSS**
-* DEG utilizes [PostCSS](http://postcss.org/) to process CSS files and aims to write modern and future-proof CSS based on W3C specifications while avoiding the proprietary syntax of preproccesors whenever possible.
-* [Skeletor](http://github.com/degdigital/skeletor) comes preconfigured with our preferred out-of-the-box PostCSS plugins, but developers are encouraged to add new plugins as the need arises on a per-project basis, while keeping the overall goals of future-proof CSS in mind.
+* Site Genesis uses SASS. PostCSS may be used if the project contains a significant custom Skeletor implementation. 
 
 **Organization**
-* CSS should be organized into partials and follow DEG's modified Atomic CSS structure of Basics, Components, Templates, & Utilities. These partials will be processed using PostCSS and the available configuration options in Skeletor.
-
-    ```
-    css
-    |-- basics/
-    |   |-- buttons.css
-    |   |-- headings.css
-    |   |-- ...
-    |-- components/
-    |-- templates/
-    |-- utilities/
-    ```
+* CSS should be organized into partials and follow Site Genesis standards.
 
 **Formatting**
-* Use tabs (4 spaces) for indentation
-* Use ID selectors sparingly, if at all
-* Use classes over generic element tags when possible
-* When using multiple selectors in a rule declaration, give each selector its own line
+* Use tabs (4 spaces) for indentation. This can be set in the browser and converted/enforced in sublime text with `Indention: Convert to Tabs`. Site genesis files should converted when editied.
+* Use ID selectors sparingly. Do not refactor existing CSS selectors to remove IDs, but try not to write new selectors based around IDs.
+* Use classes over generic element tags when possible.
+* When using multiple selectors in a rule declaration, give each selector its own line.
 * Properties should be organized in the most logical order
 * When defining multiple properties, give each property its own line
+* Avoid unnecessary nesting.
+* CSS Formatting can be applied/enforced with the Sublime Plugin CSS Format and then using the command `Format CSS: Expanded`. Because of the plugin, Site Genesis code should be formatted quickly and easily, and should be updated and commited before making modifications to the files to make code reviews easier.
 
     __Bad Formatting__
     ```css
@@ -139,14 +121,9 @@ Unless otherwise mentioned, all the contents of the main DEG UI document apply t
     ```
 
 **Pseudo BEM**
-* [BEM](http://getbem.com/) is a CSS methodology and syntax, that helps achieve reusable components. BEM stands for Block Element Modifier and consists of:
-    * __Block__: Standalone entity that is meaningful on its own.
-    * __Element__: Parts of a block and have no standalone meaning. They are semantically tied to its block.
-    * __Modifier__: Flags on blocks or elements. Use them to change appearance or behavior.
-* DEG's approach is to follow the general guidelines of BEM and it's syntax, though it is not strictly enforced, which is why it's referred to as Pseudo BEM here and throughout this document. For full documentation on the BEM methodology, reference the [BEM website](http://getbem.com/).
+* [BEM](http://getbem.com/), or a modified version that the UI developer is comfortable with, should be used for new code. Existing Site Genesis code doesn't need to be rewritten unless it is also being refactored.
 
 **Variables**
-
 * Use CSS variables for consistancy and maintainablity of styles.
 * It is recommended that you use variables for color palettes, font properties, & timing functions. Additional variables may be created on an as needed basis.
 * Namespace all variables with `--property-group`.
