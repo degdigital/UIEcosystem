@@ -428,7 +428,7 @@ Pull Requests are both a great way to maintain high quality code and an opportun
 
 * Each project will need to decide who is able to officially approve a request. If you are principle reviewer, __try to finish a review within 24 hours__. When you approve a PR, leave a comment saying it looks good or a simple :+1:. Some systems have official approval buttons.
 
-* Merging a pull request is the responsibility of the person who opened the PR. Why? There may be additional tasks such as deploying or updating a tag. 
+* Merging a pull request is the responsibility of the person who opened the PR. Why? There may be additional tasks such as deploying or updating a tag.
 
 * When reviewing, open the code in a browser if possible. It can be hard to grasp a change until you see it live.
 
@@ -495,7 +495,7 @@ function createSidebar(data) {
 ```
  Reviewer:
  > I get a little lost on this function. Could you split it up?
- 
+
  * Incorporating libraries
  ```javascript
  // File someproject/bankingForm.js
@@ -505,7 +505,7 @@ function createSidebar(data) {
  ```
  Reviewer:
  > We have a library called [Password Strength](https://github.com/DEGJS/passwordStrength) you might check to see if that would work in this situation.
- 
+
  * Catching potential bugs
  ```javascript
  function getTotalMileage(reports) {
@@ -516,24 +516,24 @@ function createSidebar(data) {
   ```
   Reviewer:
   > Looks like you forgot to return the total after running the reduce function. That'll return `undefined` everytime.
-  
+
   * Updating documentation and tests
-  
+
   Reviewer:
   > Looks good, but you should probably add a note to the README.
-  
-  * And more 
-  
+
+  * And more
+
   There are many more things you may notice. It's ok to ask just remember to be polite.
- 
+
  **Receiving Feedback**
- 
+
  * Assume everyone is acting in good faith. It's hard to communicate tone on the web. So assume that everyone is giving suggestions in a compassionate manner. It's almost certainly true.
- 
+
  * You have the right to say no. As long as you are not violating an agreed upon set of standards, it's your code. But if you disagree just note that you read the comment, but prefer to keep it how it is. It's helpful if you can give a justification---"I think a for loop communicates a little more clearly than a reduce function"---but it's not mandatory.
- 
+
  * If you like a suggestion, but do not have time, create an issue or leave a TODO statement in the code.
- 
+
  Reviewer:
 > You should consider a reusable function
 
