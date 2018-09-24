@@ -387,9 +387,12 @@ Although projects do often present unique challenges, there are certain challeng
 ### Javascript
 * JSPM - Package Management
 * SystemJS - Module Bundling
+* Rollup.js - Module Bundling
 
 ### Task Runners
 * Grunt
+* Node scripts
+* Skeletor 2.0
 
 ### Visual Editors
 * Photoshop
@@ -403,7 +406,7 @@ Although projects do often present unique challenges, there are certain challeng
 
 ### ALM / Version Control
 * JIRA
-* Assembla
+* Bitbucket
 * Git
 
 ### Continuous Integration
