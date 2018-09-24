@@ -375,6 +375,7 @@ Although projects do often present unique challenges, there are certain challeng
 ## Tooling
 
 ### IDEs/Editors
+* VS Code
 * Sublime Text
 * PHPStorm
 * Visual Studio
