@@ -88,7 +88,7 @@
 ### CSS
 **PostCSS**
 * DEG utilizes [PostCSS](http://postcss.org/) to process CSS files and aims to write modern and future-proof CSS based on W3C specifications while avoiding the proprietary syntax of preproccesors whenever possible.
-* [Skeletor](http://github.com/degdigital/skeletor) comes preconfigured with our preferred out-of-the-box PostCSS plugins, but developers are encouraged to add new plugins as the need arises on a per-project basis, while keeping the overall goals of future-proof CSS in mind.
+* [Skeletor](https://deg-skeletor.github.io/) comes preconfigured with our preferred out-of-the-box PostCSS plugins, but developers are encouraged to add new plugins as the need arises on a per-project basis, while keeping the overall goals of future-proof CSS in mind.
 
 **Organization**
 * CSS should be organized into partials and follow DEG's modified Atomic CSS structure of Basics, Components, Templates, & Utilities. These partials will be processed using PostCSS and the available configuration options in Skeletor.
@@ -149,8 +149,8 @@
 **Variables**
 
 * Use CSS variables for consistancy and maintainablity of styles.
-* It is recommended that you use variables for color palettes, font properties, & timing functions. Additional variables may be created on an as needed basis.
-* Namespace all variables with `--property-group`.
+* It is recommended that you use variables for color palettes, font properties, & animation properties. Additional variables may be created on an as needed basis.
+* Namespace all variables with `--property-group`. Examples: `--font-weight-bold` and `font-weight-regular`.
 * Append a logical and easy to reference modifier to all variations: `-modifier`.
 * If a logical scale can be applied, `-point-scale` can be used as the modifier. If no logical scale can be applied, use logical modifiers i.e. `-light`.
 * Add a line break between different property group types.
@@ -303,27 +303,31 @@
 ### Javascript
 While DEG doesn't maintain a specific code style guide in relation to Javascript, we do utilize es6 features and syntax and tend to follow the guidelines set out by airbnb in their [Javascript style guide](https://github.com/airbnb/javascript).
 
-**JSPM/SystemJS**
-* DEG utilizes [JSPM](http://jspm.io/) and [SystemJS](https://github.com/systemjs/systemjs) for Javascript package management, module bundling/loading, and transpilation. For more detailed information on how these tools are used, refer to the [Javscript section](https://github.com/degdigital/skeletor#javascript) of the Skeletor documentation.
+**Package Management**
+* Deg utilizes NPM for package management.
 
 **Modules**
 * DEG utilizes Javascript modules to create a maintainable, reusable, and performant codebase rather than a sprawling and interdependent one.
 * Small, self-contained modules with distinct functionality are preferred over large, all inclusive modules. This allows for modules that can be [shuffled, removed, or added as necessary](https://medium.freecodecamp.com/javascript-modules-a-beginner-s-guide-783f7d7a5fcc#.xi6wgrvv2), without disrupting the system as a whole.
 
-**Polyfilled Bundles**
-* In many cases, Javascript code will require certain feature polyfills in order to run correctly on legacy (or even modern) browsers. For delivering these polyfills to the client, DEG takes the [conditional-build approach](https://github.com/SlexAxton/yepnope.js#deprecation-notice) recommended by the yepnope.js team and others. For more details on how to generate conditional builds, refer to the [Polyfilled Bundles](https://github.com/degdigital/skeletor#polyfilled-bundles) section of the Skeletor documentation.
+**Module Bundling**
+* DEG utilizes [Rollup.js](https://rollupjs.org/) for ES6 module bundling and code splitting. For legacy browsers that do not support ES6 modules, Rollup.js can be configured to output bundles in a [SystemJS](https://github.com/systemjs/systemjs) format.
 
-## Frameworks
+**Compiling**
+* DEG utilizes [Babel](https://babeljs.io/) to compile and convert modern and next-gen JavaScript into a backwards-compatible version that will run in all necessary browsers.
+
+**Polyfilling**
+* In addition to core-js polyfills delivered via Babel, DEG utilizes [Polyfill.io](https://polyfill.io/v3/) to polyfill JavaScript and DOM API features as necessary. To reduce the payload size of the polyfill file, it is recommended that only features being used by the codebase be polyfilled.
+
+## Tools
 ### Skeletor
-
-Skeletor is a [Grunt](http://gruntjs.com)-powered, [Pattern Lab](http://patternlab.io)-centric, highly-customizable web project boilerplate and build tool created by the [DEG](http://www.degdigital.com) UI team. Skeletor uses [PostCSS](http://postcss.org) for CSS processing and [JSPM](http://jspm.io)/[SystemJS](https://github.com/systemjs/systemjs) for Javascript package management, module bundling/loading, and transpilation. Full Skeletor documentation is available [here](https://github.com/degdigital/skeletor).
+Skeletor is a Node-powered, [Pattern Lab](http://patternlab.io)-centric, highly-customizable web project boilerplate and build tool created by the [DEG](http://www.degdigital.com) UI team. Skeletor uses [PostCSS](http://postcss.org) for CSS processing and [Rollup.js](https://rollupjs.org/) for Javascript module bundling. Full Skeletor documentation is available [here](https://deg-skeletor.github.io/).
 
 ### Pattern Lab
-Pattern Lab is a collection of tools to help you create atomic design systems. DEG uses Pattern Lab as a design & development tool, a prototyping & demo tool, and as an interactive style guide deliverable for clients. Although Pattern Lab comes with an out of the box pattern starter kit, we have modified this kit to more closely resemble the types of projects we work on and practices we follow. Our modified version of Pattern Lab can be found within [Skeletor](https://github.com/degdigital/skeletor). Pattern Lab specific documentation can be found on the [Pattern Lab website](http://patternlab.io/).
+Pattern Lab is a collection of tools to help you create atomic design systems. DEG uses Pattern Lab as a design & development tool, a prototyping & demo tool, and as an interactive style guide deliverable for clients. Although Pattern Lab comes with an out of the box pattern starter kit, we have modified this kit to more closely resemble the types of projects we work on and practices we follow. Our modified version of Pattern Lab can be found within [Skeletor](https://deg-skeletor.github.io/). Pattern Lab specific documentation can be found on the [Pattern Lab website](http://patternlab.io/).
 
 ## Libraries
 ### DEGJS
-
 [DEGJS](https://github.com/degjs) is a curated list of ES6-formatted JavaScript modules, encompassing front-end functionality and utilities, developed by the DEG UI team. All modules are hosted under our [DEGJS GitHub account](https://github.com/degjs), and are formatted to work with Babel, the JSPM package manager and its accompanying JavaScript loader, System.js.
 
 ### jQuery
@@ -385,12 +389,11 @@ Although projects do often present unique challenges, there are certain challeng
 * Legacy Projects: Sass/Compass
 
 ### Javascript
-* JSPM - Package Management
-* SystemJS - Module Bundling
+* Node - Package Management
 * Rollup.js - Module Bundling
+* Babel - Compiling
 
 ### Task Runners
-* Grunt
 * Node scripts
 * Skeletor 2.0
 
