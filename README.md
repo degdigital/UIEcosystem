@@ -234,6 +234,7 @@
 **Breakpoints & Media Queries**
 * __Write Mobile First CSS.__ Authoring mobile-first styles results in smaller, simpler, more maintainable code and is in line with DEG's stance on progressive enhancement.
 * __Don’t use device dimensions to determine breakpoints.__ The device landscape is always changing, so today’s values might be moot even just a year down the road. The Web is inherently fluid, so it’s our job to create interfaces that look and function beautifully on any screen instead of in just a few arbitrary buckets.
+* __Place media queries at the bottom of the css file__. Placing media queries in one spot, allows for a quicker, more complete understanding of changes introduced at certain breakpoints. When media queries are scattered throughout the file, that requires contributors to jump around to piece together changes.
 * __Use `em`'s to define dimensions for media queries__. Avoid `px` and `rem` based units as `em`'s are the only units that [perform reliably across browsers](http://zellwk.com/blog/media-query-units/).
 
     __Bad__
